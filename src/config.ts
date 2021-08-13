@@ -7,11 +7,8 @@ const CONFIG_PATH = p.join(process.cwd(), CONFIG_FILE);
 
 let Config: {
   'available-langs': string[]
-  'google': {
-    'privateKey': string
-    'spreadsheetId': string
-  },
-  'resourcesFile': string
+  source: string
+  resourcesFile: string
 };
 
 export const config = async () => {

@@ -1,6 +1,6 @@
 {
   "name": "i18n-next-tools",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Scan and manage translations",
   "keywords": [
     "i18next",
@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run clean && copy-files-from-to && tsc",
     "clean": "rimraf ./dist",
-    "gen.barrels": "rimraf ./src/index.ts && barrelsby flat -d ./src -q -i /tools*"
+    "gen.barrels": "rimraf ./src/index.ts && barrelsby flat -d ./src -q -i /export*"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import * as p from 'path';
-import { exists, getFiles } from '../utils/fs';
-import { config } from '../config';
+import { exists, getFiles } from './utils/fs';
+import { config } from './config';
 
 const mergeObjects = (src: any, dist: any) => {
   const distKeys = Object.keys(dist);
@@ -35,7 +35,7 @@ export const scanResources = async () => {
           if (!mod[modName]) {
             mod[modName] = {} as any;
           }
-          mod[modName][`k${m.groups.key}`] = m.groups.defaultValue;
+          mod[modName][`k${m.groups.key}`] = m.groups.defaultValue.replace('\\\'', '\'');
         }
       }
     }

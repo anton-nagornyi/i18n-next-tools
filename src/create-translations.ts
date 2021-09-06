@@ -1,3 +1,3 @@
-import { createTranslations } from './tools/tools';
+import { createTranslations } from './tools';
 
 createTranslations();

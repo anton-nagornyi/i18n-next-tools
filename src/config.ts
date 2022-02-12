@@ -9,6 +9,7 @@ let Config: {
   'available-langs': string[]
   source: string
   resourcesFile: string
+  defaultLang: string
 };
 
 export const config = async () => {
